@@ -28,10 +28,10 @@ npm install
    ```
 ## Start servers
  Node server
- ´´´bash
+ ```bash
  nodemon app.js
- ´´´
+ ```
  Python server
- ´´´bash
+ ```bash
  uvicorn app:app --host 0.0.0.0 --port 8000
- ´´´
+ ```
