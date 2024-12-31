@@ -18,7 +18,7 @@ Turkish sentiment analysis dataset used for model training
 ## Setup
 Clone repo:
 ´´´bash
-  git clone ..
+  git clone ..´´´
 
 ** Install javascript modules:
-´´´npm install
+´´´npm install´´´
