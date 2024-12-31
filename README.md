@@ -12,9 +12,9 @@ Comment and reply system
 [Dataset]https://www.kaggle.com/datasets/mustfkeskin/turkish-movie-sentiment-analysis-dataset
 
 ##used Tecnologies:
--Back-End: Node.js(express.js),Python(FastApi)
--Front-End :Ejs,CSS
--Database: MongoDB
+- Back-End: Node.js(express.js),Python(FastApi)
+- Front-End :Ejs,CSS
+- Database: MongoDB
 ## Setup
 Clone repo:
 '''bash
