@@ -23,9 +23,8 @@ Turkish sentiment analysis dataset used for model training
   ```bash
 git clone https://github.com/yusufsvn/Movie-Discussion.git
   ````
+2.Install javascript modules:
 
-  2.Install javascript modules:
-
-    ```bash
-    npm install
-    ```
+   ```bash
+npm install
+   ```
