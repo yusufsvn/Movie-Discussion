@@ -26,6 +26,6 @@ git clone https://github.com/yusufsvn/Movie-Discussion.git
 
   2.Install javascript modules:
 
-    ````python
+    ```bash
     npm install
-    ````
+    ```
