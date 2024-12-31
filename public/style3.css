@@ -1,0 +1,80 @@
+body,
+html {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  background: #232526;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #570000, #020100);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #570000, #020100); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
+}
+
+
+.container1 {
+  width: 300px;
+  height: 200px;
+  /* Gradient background */
+  background: #8E0E00;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right,  #cc8c38, #d48279);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #cc8c38, #d48279); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  font-size: 18px;
+  color: #ffffff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container1:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+
+.container {
+  width: 300px;
+  height: 200px;
+  /* Gradient background */
+  background: #8E0E00;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right,  #cc8c38, #d48279);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #cc8c38, #d48279); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  font-size: 18px;
+  color: #ffffff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container1:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+

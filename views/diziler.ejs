@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style5.css"
+</head>
+<body>
+  <nav class="navbar">
+    <div class="containera">
+      <ul class="nav-links">
+        <li><a href="/anasayfa">Anasayfa</a></li>
+        <li><a href="/logout">Çıkış yap</a></li>
+      </ul>
+    </div>
+  </nav>
+    <h1>
+        Diziler
+    </h1>
+    <%for(let i=0;i<series.length;i++){ %>
+      <div class="container">
+        <div class="text-container" data-title="<%=series[i][4]%>">
+          <h2>
+            <%=series[i][0]%>
+          </h2>
+          <p><b>Uzunluk:</b>
+            <%=series[i][2]%>
+          </p>
+          <p><b>Özet:</b>
+            <%=series[i][1]%>
+          </p>
+        </div>
+      </div>
+      <%}%>
+    <script>
+         document.querySelectorAll(".text-container").forEach((element) => {
+          element.addEventListener("click", function () {
+            // Hangi filme tıklandığını almak için
+            const movieId = this.getAttribute("data-title");
+            console.log(movieId)
+            fetch(`/diziler/goPage?movieId=${movieId}`, {
+              method: "GET",
+            })
+              .then((response) => response.json())
+              .then((data) => {
+                window.location.href = '/templeofseries';
+              })
+          });
+
+
+        });
+    </script>  
+</body>
+</html>

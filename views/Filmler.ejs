@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Filmler</title>
+  <link rel="stylesheet" href="/style5.css" </head>
+
+<body>
+  <nav class="navbar">
+    <div class="containera">
+      <ul class="nav-links">
+        <li><a href="/anasayfa">Anasayfa</a></li>
+        <li><a href="/logout">Çıkış yap</a></li>
+      </ul>
+    </div>
+  </nav>
+  <h1>
+    Filmler
+  </h1>
+  <%for(let i=0;i<movies.length;i++){ %>
+    <div class="container">
+      <div class="text-container" data-title="<%=movies[i][3]%>">
+        <h2>
+          <%=movies[i][0]%>
+        </h2>
+        <p><b>Uzunluk:</b>
+          <%=movies[i][2]%>
+        </p>
+        <p><b>Özet:</b>
+          <%=movies[i][1]%>
+        </p>
+      </div>
+    </div>
+    <%}%>
+      <script>
+        document.querySelectorAll(".text-container").forEach((element) => {
+          element.addEventListener("click", function () {
+            // Hangi filme tıklandığını almak için
+            const movieId = this.getAttribute("data-title");
+
+            fetch(`/filmler/goPage?movieId=${movieId}`, {
+              method: "GET",
+            })
+              .then((response) => response.json())
+              .then((data) => {
+                window.location.href = '/templeofpage';
+              })
+          });
+
+
+        });
+      </script>
+</body>
+
+</html>

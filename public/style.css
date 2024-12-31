@@ -1,0 +1,66 @@
+body {
+    font-family: Arial, sans-serif; /* Yazı tipi */
+    display: flex; /* Flexbox ile ortalama */
+    justify-content: center; /* Yatay ortalama */
+    align-items: center; /* Dikey ortalama */
+    height: 100vh; /* Tam ekran yüksekliği */
+    margin: 0; /* Kenar boşluğu kaldır */
+    background: #eb5757; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #000000, #eb5757); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #000000, #eb5757); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+ 
+}
+
+/* Başlık stili */
+h1 {
+    background: #2C3E50;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #FD746C, #2C3E50);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #FD746C, #2C3E50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    color: white; /* Yazı rengi */
+    padding: 15px; /* İç boşluk */
+    border-radius: 8px; /* Yuvarlak köşeler */
+    text-align: center; /* Ortalanmış yazı */
+    width: 100%; /* Genişlik */
+    margin-bottom: 20px; /* Başlık ve form arasındaki boşluk */
+    position: absolute; /* Başlığı sayfanın en üstüne almak için absolute konumlandırma */
+    top: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Gölge efekti */
+}
+
+/* Form stili */
+section {
+    background: white; /* Form arka plan rengi */
+    padding: 30px; /* İç boşluk */
+    border-radius: 8px; /* Yuvarlak köşeler */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Gölge efekti */
+    width: 300px; /* Form genişliği */
+    text-align: center; /* İçerik ortalaması */
+}
+
+/* Girdi alanı stili */
+input {
+    width: 100%; /* Genişlik */
+    padding: 10px; /* İç boşluk */
+    margin-bottom: 15px; /* Alt boşluk */
+    border: 1px solid #ddd; /* Kenarlık */
+    border-radius: 5px; /* Yuvarlak köşeler */
+    font-size: 16px; /* Yazı boyutu */
+}
+
+.button-78 {
+    background-image: linear-gradient(92.83deg, #ff2626 0, #651404 100%);
+    color: white; /* Buton yazı rengi */
+    padding: 15px; /* Buton iç boşluğu */
+    border: none; /* Kenarlık yok */
+    border-radius: 5px; /* Yuvarlak köşeler */
+    cursor: pointer; /* İmleç değişimi */
+    font-size: 16px; /* Yazı boyutu */
+    transition: background 0.3s ease; /* Geçiş efekti */
+    width: 100%; /* Buton genişliği */
+}
+
+/* Buton hover durumu */
+.button-78:hover {
+    background-image: linear-gradient(92.83deg, #f93a13 0, #ff7426 100%);
+}

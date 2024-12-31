@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Film İncelemeleri</title>
+    <link rel="stylesheet" href="/style6.css">
+    <script>
+        function showReplyForm(button) {
+            const replySection = button.nextElementSibling;
+            const replyForm = replySection.querySelector('.reply-form');
+            replyForm.style.display = replyForm.style.display === 'none' ? 'block' : 'none';
+        }
+    </script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+          <ul class="nav-links">
+            <li><a href="/anasayfa">Anasayfa</a></li>
+            <li><a href="/logout">Çıkış yap</a></li>
+          </ul>
+        </div>
+      </nav>    
+    <div class="movie-container">
+        <div class="content">
+            <!-- Film Resmi -->
+            <h1><%=resultlist.title%></h1>
+            <div class="movie-info">
+                <div class="image-container">
+                    <img src="<%= resultlist.img %>" alt="Film resmi" />
+                </div>
+
+                <div class="reviews">
+                    <p><b>Oyuncular:</b> <%= resultlist.cast %></p>
+                    <p><b>Yönetmen:</b> <%= resultlist.director %></p>
+                    <p><b>ortalama bölüm süresi:</b> <%= resultlist.avrgchapsize %></p>
+                    <p><b>Sezon sayısı:</b> <%=resultlist.seasonsize%></p>
+                    <h2>%<%= ratio%> oranında beğeniliyor</h2>
+                </div>
+            </div>
+            
+            <div class="reviews">
+
+                <!-- Film Özeti -->
+                <div class="summary">
+                    <p><b>Özet:</b> <%= resultlist.summary %></p>
+                </div>
+            </div>
+
+ 
+            <h3>İncelemeler</h3>
+            <form class="comment-form" method="post" action="/movies/send/comment">
+                <textarea name="comment" class="comment" placeholder="Yorumunuzu yazın..."></textarea>
+                <input type="hidden" name="id" value="<%= resultlist._id %>">
+                <button type="submit" class="reply-btn">Yorum Gönder</button>
+            </form>
+
+            <div id="comment-section">
+                <% yorumlist.forEach(yorum=> { %>
+                    
+                    <%if(yorum.parentCommentId !="null" ){%>
+                        <div class="comment">
+                            <p><strong><%= yorum.user ? yorum.user.name : 'Anonim' %> <%= yorum.user ? yorum.user.surname : '' %>:</strong><%= yorum.text %></p>
+                            <p><small><%= yorum.timestamp %></small></p>
+                            <button class="reply-btn" onclick="showReplyForm(this)">Yanıtla</button>
+                            
+                                <div class="reply-section">
+                                    <!--  yanıt gövdesi -->
+                                    <form class="reply-form" style="display: none;" method="post"
+                                        action="/movies/send/response">
+                                        <input type="hidden" name="filmid" value="<%= resultlist._id %>">
+                                        <input type="hidden" name="parentId" value="<%= yorum.id %>">
+                                        <textarea name="replyText" placeholder="Yanıtınızı yazın..."></textarea>
+                                        <button type="submit">Yanıt Gönder</button>
+                                    </form>
+                                    <!-- yanıtlar devam-->
+                                    <div class="replies">
+                                        <% if (yorum.replies && yorum.replies.length> 0) { %>
+                                            <% yorum.replies.forEach(reply=> { %>
+                                                <div class="comment child-comment">
+                                                    <p><strong>
+                                                            <%= reply.user ? reply.user[0].name : 'Anonim' %>
+                                                                <%= reply.user ? reply.user[0].surname : '' %>:
+                                                        </strong>
+                                                        <%= reply.text %>
+                                                    </p>
+                                                    <p><small>
+                                                            <%= reply.timestamp %>
+                                                        </small></p>
+                                                </div>
+                                            <% }); %>
+                                        <% } %>
+                                    </div>
+                                </div>
+                            
+
+
+
+
+                                
+                        </div>
+                    <%};%>
+                <%});%>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

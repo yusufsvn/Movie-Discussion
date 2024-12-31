@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Film ve Dizi Yönetimi</title>
+    <link rel="stylesheet" href="/style7.css"> <!-- CSS Dosyası -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            function delFunc(event){
+                console.log("delfunc çağırıldı");
+                const input = event.target.getAttribute('data-input');
+                fetch('/admin/sil',
+                { 
+                    method: 'DELETE',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({ message: input })
+                }).catch((err) => {
+                    console.log(err);
+                });
+            }
+
+            document.getElementById('listbuton').addEventListener('click', function(){
+                const input = document.getElementById('searchinput').value;
+                fetch('/admin/searchitem', {
+                    method:'POST',
+                    headers:{'Content-Type': 'application/json'},
+                    body: JSON.stringify({input: input})
+                })
+                .then(response => response.json()) 
+                .then(data => {
+                    // title ekleme
+                    const inputfromserver = data;
+                    const title = document.createElement('h1');
+                    title.textContent = inputfromserver;
+                    document.getElementById('dynamicDiv').appendChild(title);
+                    
+                    // buton ekleme
+                    const button = document.createElement('button');
+                    button.type = 'button';
+                    button.id = 'silbuton';
+                    button.textContent = 'Sil'; 
+                    button.setAttribute('data-input', inputfromserver); 
+                    button.addEventListener('click', (event) => {
+                        console.log("butona tıklandı func çağrılıyor");
+                        delFunc(event);
+                    });
+                    
+                    document.getElementById('dynamicDiv').appendChild(button);   
+                })
+                .catch((error) => {
+                    console.error('Error:', error); 
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Film Ekle</h1>
+        <form action="/admin/addmovie" method="post">
+            <input type="text" name="title" placeholder="Film Başlığı" >
+            <input type="text" name="info" placeholder="Film Bilgisi" >
+            <input type="text" name="lengthofmovie" placeholder="Film Uzunluğu" >
+            <textarea name="summary" placeholder="Özet" ></textarea>
+            <textarea name="cast" placeholder="Oyuncular" ></textarea>
+            <input type="text" name="director" placeholder="Yönetmen" >
+            <input type="text" name="img" placeholder="Resim Bağlantısı" >
+            <button type="submit">Ekle</button>
+        </form>
+    </div>
+
+    <div class="container">
+        <h1>Dizi Ekle</h1>
+        <form action="/admin/addserie" method="post">
+            <input type="text" name="title" placeholder="Dizi Başlığı" >
+            <input type="text" name="info" placeholder="Dizi Bilgisi" >
+            <input type="text" name="avrgchapsize" placeholder="Averaj Bölüm Süresi" >
+            <input type="text" name="seasonsize" placeholder="Sezon Sayısı" >
+            <textarea name="summary" placeholder="Özet" ></textarea>
+            <textarea name="cast" placeholder="Oyuncular" ></textarea>
+            <input type="text" name="director" placeholder="Yönetmen" >
+            <input type="text" name="img" placeholder="Resim Bağlantısı" >
+            <button type="submit">Ekle</button>
+        </form>
+    </div>
+
+    <div class="container">
+        <h2>Film Listele</h2>
+        <input type="text" id="searchinput" placeholder="Film veya Dizi İsmi Girin">
+        <button type="button" id="listbuton">Göster</button>
+        <div id="dynamicDiv"></div>
+    </div>
+</body>
+</html>

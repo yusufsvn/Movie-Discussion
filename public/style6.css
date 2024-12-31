@@ -1,0 +1,221 @@
+/* Genel Sayfa Ayarları */
+body {
+    font-family: Arial, sans-serif;
+    background: #232526;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #570000, #020100);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #570000, #020100); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    color: black;
+    margin-top: 20px;
+    font-size: 3em;
+}
+.movie-info {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px; /* Elemanlar arasında boşluk bırakır */
+}
+
+/* Film Konteyneri */
+.movie-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 800px;
+    background: #bf200e;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #e8761a, #bf200e);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #e8761a, #bf200e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+       
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    
+}
+
+/* Film Resmi */
+.image-container img {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* İçerik Alanı */
+.content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+.summary p, .reviews p {
+    margin: 10px 0;
+    line-height: 1.5;
+    color: #000000;
+    font-size: 17;
+    
+}
+h2 {
+    color: #000000;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+}
+
+.summary b, .reviews b {
+    color: rgb(0, 0, 0);
+}
+.summary {
+    padding: 20px;
+    background-color:#a9e6ed;
+    border-radius: 10px;
+}
+
+/* Film İnceleme Alanı */
+.reviews {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.review {
+    background-color: #eaf3ff;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Başlık ve Özellikler */
+h3 {
+    color: black;
+    margin-bottom: 10px;
+    font-size: 1.3em;
+    border-bottom: 1px solid #000000;
+    padding-bottom: 5px;
+}
+
+/* Genel yorum ve inceleme bölümü */
+.discussion-section {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #000000;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Tartışma başlığı ve yorum kartı */
+.topic-card, .comment, .reply-section {
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.reply-btn {
+    margin-top: 5px;
+    background-color: #600000;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+
+    font-size: 14px;
+}
+
+.reply-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Yanıt formu */
+.reply-form {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.reply-form textarea {
+    font-size: 14px;
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    margin-bottom: 5px;
+    
+}
+
+.reply-form button {
+    align-self: flex-end;
+    padding: 5px 10px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #28a745;
+    border: none;
+
+    cursor: pointer;
+}
+
+.reply-form button:hover {
+    background-color: #218838;
+}
+
+/* Yanıtlar */
+.replies {
+    margin-left: 20px; /* Child yorumları içeri kaydır */
+}
+
+.replies .reply {
+    font-size: 13px;
+    color: #000000;
+    margin-top: 5px;
+}
+.comment-form {
+    display: flex;
+    flex-direction: column;
+    
+}
+.child-comment {
+    background-color: #f9f9f9;
+}
+.comment {
+    padding: 10px;
+    border: 1px solid #000000;
+    border-width: 3px;
+    margin-bottom: 5px;
+    background-color: #a9e6ed;
+}
+
+/* styles.css */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #d34a4a;
+    padding: 0.5rem 1rem;
+    color: #fff;
+  }
+
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .nav-links li {
+    display: inline;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+  }
+  
+  .nav-links a:hover {
+    text-decoration: underline;
+    color: #3498db;
+  }
