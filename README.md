@@ -7,9 +7,9 @@ users can get summary information about the movies, decide if they are worth wat
 - Deep learning model for comment sentiment analysis
 - Admin panel (addding,deleting movie or serie)
 - Comment and reply system
-
-### Turkish sentiment analysis dataset used for model training 
-[Dataset]https://www.kaggle.com/datasets/mustfkeskin/turkish-movie-sentiment-analysis-dataset
+## Dataset
+Turkish sentiment analysis dataset used for model training 
+ [Dataset](https://www.kaggle.com/datasets/mustfkeskin/turkish-movie-sentiment-analysis-dataset).
 
 ## Used Tecnologies:
 - Back-End: Node.js(express.js),Python(FastApi)
