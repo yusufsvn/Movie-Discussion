@@ -10,10 +10,11 @@ Comment and reply system
 
 ### Turkish sentiment analysis dataset used for model training 
 [Dataset]https://www.kaggle.com/datasets/mustfkeskin/turkish-movie-sentiment-analysis-dataset
+
 ##used Tecnologies:
-Back-End: Node.js(express.js),Python(FastApi)
-Front-End :Ejs,CSS
-Database: MongoDB
+-Back-End: Node.js(express.js),Python(FastApi)
+-Front-End :Ejs,CSS
+-Database: MongoDB
 ## Setup
 Clone repo:
 '''bash
