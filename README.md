@@ -16,20 +16,17 @@ Turkish sentiment analysis dataset used for model training
 - Front-End :Ejs,CSS
 - Database: MongoDB
 ## Setup
-Clone repo:
-´´´bash
-  git clone ..´´´
 
-Install javascript modules:
+
 npm install
-1. foo
+1. Clone repo
 
   ````python
 print 'bar'
   ````
 
-  1.
+  2.Install javascript modules:
 
-    ````python
-print 'bar'
+    ````bash
+npm install
     ````
