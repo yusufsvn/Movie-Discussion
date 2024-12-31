@@ -16,6 +16,8 @@ Turkish sentiment analysis dataset used for model training
 - Front-End :Ejs,CSS
 - Database: MongoDB
 ## Setup
+mongoDB url is required to use the database
+
 1. Clone repo
 
   ```bash
