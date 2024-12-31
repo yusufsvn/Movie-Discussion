@@ -26,3 +26,12 @@ git clone https://github.com/yusufsvn/Movie-Discussion.git
    ```bash
 npm install
    ```
+## Start servers
+ Node server
+ ´´´bash
+ nodemon app.js
+ ´´´
+ Python server
+ ´´´bash
+ uvicorn app:app --host 0.0.0.0 --port 8000
+ ´´´
