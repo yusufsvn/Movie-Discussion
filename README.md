@@ -35,3 +35,9 @@ npm install
  ```bash
  uvicorn app:app --host 0.0.0.0 --port 8000
  ```
+
+![loginpage](https://github.com/user-attachments/assets/e63911a4-4eb1-4616-ae46-c274bacb2057)
+![comment](https://github.com/user-attachments/assets/36da025c-66a2-45b2-927f-f6527efb6549)
+![moviepage](https://github.com/user-attachments/assets/f7fa168f-979a-401e-8e1e-cbcfacd0c58f)
+![movie](https://github.com/user-attachments/assets/8c4c3c58-12cd-4627-9040-2d1696fe7868)
+
