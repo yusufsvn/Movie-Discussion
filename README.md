@@ -20,5 +20,16 @@ Clone repo:
 ´´´bash
   git clone ..´´´
 
-** Install javascript modules:
-´´´npm install´´´
+Install javascript modules:
+npm install
+1. foo
+
+  ````python
+print 'bar'
+  ````
+
+  1.
+
+    ````python
+print 'bar'
+    ````
