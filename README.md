@@ -17,8 +17,8 @@ Turkish sentiment analysis dataset used for model training
 - Database: MongoDB
 ## Setup
 Clone repo:
-'''bash
+´´´bash
   git clone ..
 
-javascript modules:
-'''npm install
+** Install javascript modules:
+´´´npm install
