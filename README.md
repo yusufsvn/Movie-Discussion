@@ -21,8 +21,7 @@ Turkish sentiment analysis dataset used for model training
 npm install
 1. Clone repo
 
-  ````python
-print 'bar'
+  ```git clone https://github.com/yusufsvn/Movie-Discussion.git
   ````
 
   2.Install javascript modules:
